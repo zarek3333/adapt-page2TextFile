@@ -32,7 +32,7 @@
                   "require": true,
                   "title": "Print prompt text",
                   "inputType": "Textbox",
-                  "default": "<a href='javascript:window.print();'>Click this link to view PDF version of this page.</a>"
+                  "default": "Click this link to view PDF version of this page."
                 }
               }
             }

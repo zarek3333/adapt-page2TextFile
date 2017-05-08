@@ -2,10 +2,10 @@
   "name": "adapt-printPage",
   "repository": "git://github.com/KingsOnline/adapt-farfalla",
   "framework": "^2.0.0",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "Print Page",
   "extension": "Print Page",
-  "description": "Extension that allows Google Analytics to be easily added into an Adapt course.",
+  "description": "Adds print page text to bottom of the page",
   "main": "/js/adapt-printPage.js",
   "keywords": [
     "adapt-plugin",
