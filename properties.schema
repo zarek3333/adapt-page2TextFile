@@ -31,7 +31,7 @@
                   "type": "string",
                   "require": true,
                   "title": "Print prompt text",
-                  "inputType": "Textbox",
+                  "inputType": "TextArea",
                   "default": "Click this link to view PDF version of this page."
                 }
               }

@@ -2,7 +2,7 @@
   "name": "adapt-printPage",
   "repository": "git://github.com/KingsOnline/adapt-farfalla",
   "framework": "^2.0.0",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "displayName": "Print Page",
   "extension": "Print Page",
   "description": "Adds print page text to bottom of the page",
