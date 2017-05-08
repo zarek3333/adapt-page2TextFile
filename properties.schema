@@ -10,33 +10,33 @@
       "required": true,
       "properties": {
         "config": {
+          "type": "object"
+        },
+        "contentobject": {
           "type": "object",
           "properties": {
-            "_farfalla": {
+            "_printPage": {
               "type": "object",
               "required": false,
-              "legend": "Google Analytics",
+              "legend": "Print Page",
               "properties": {
                 "_isEnabled": {
                   "type": "boolean",
                   "default": true,
-                  "title": "Enable Google Analytics",
+                  "title": "Enable Print page button",
                   "inputType": "Checkbox",
-                  "help": "Turn off and republish to stop tracking a course"
+                  "help": ""
                 },
-                "_identifier": {
+                "text": {
                   "type": "string",
                   "require": true,
-                  "title": "Identifer code",
-                  "inputType": "Text",
-                  "help": "You can find this on the Google Analytics website"
+                  "title": "Print prompt text",
+                  "inputType": "Textbox",
+                  "default": "<a href='javascript:window.print();'>Click this link to view PDF version of this page.</a>"
                 }
               }
             }
           }
-        },
-        "contentobject": {
-          "type": "object"
         },
         "article": {
           "type": "object"
