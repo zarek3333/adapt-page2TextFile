@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {},
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "_farfalla": {
+              "type": "object",
+              "required": false,
+              "legend": "Google Analytics",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Enable Google Analytics",
+                  "inputType": "Checkbox",
+                  "help": "Turn off and republish to stop tracking a course"
+                },
+                "_identifier": {
+                  "type": "string",
+                  "require": true,
+                  "title": "Identifer code",
+                  "inputType": "Text",
+                  "help": "You can find this on the Google Analytics website"
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

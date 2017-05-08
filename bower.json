@@ -1,0 +1,20 @@
+{
+    "name": "adapt-farfalla",
+    "repository": "git://github.com/KingsOnline/adapt-farfalla",
+    "framework": "^2.0.0",
+    "version": "1.0.4",
+    "displayName": "Google Analytics",
+    "extension": "Google Analytics",
+    "description": "Extension that allows Google Analytics to be easily added into an Adapt course.",
+    "main": "/js/adapt-farfalla.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-extension"
+    ],
+    "authors": [
+        "Simon Date"
+    ],
+    "license": "GPL-3.0",
+    "homepage": "https://github.com/KingsOnline/adapt-farfalla",
+    "targetAttribute": "_farfalla"
+}

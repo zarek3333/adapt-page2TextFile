@@ -1,0 +1,5 @@
+//config.json
+"_farfalla": {
+  "_isEnabled": true,
+  "_identifier": "your Google Analytics code here"
+}
