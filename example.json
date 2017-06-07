@@ -1,5 +1,5 @@
-//config.json
-"_farfalla": {
+//contentObjects.json
+"_printPage": {
   "_isEnabled": true,
-  "_identifier": "your Google Analytics code here"
+  "text": "Click here to print your page"
 }
