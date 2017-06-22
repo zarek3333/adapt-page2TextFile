@@ -4,8 +4,6 @@ define([
 
   var printPageView = Backbone.View.extend({
 
-    className: "printPage",
-
     initialize: function() {
       this.listenTo(Adapt, {
         "navigation:printPage": function(){
@@ -13,8 +11,6 @@ define([
       });
 
       this.listenTo(Adapt, 'remove', this.remove);
-      console.log(this.model);
-      console.log(this.model.model._showOn);
       if(this.model.model._showOn == 'navigation'){
         this.renderNavigation();
       } else {
@@ -27,14 +23,12 @@ define([
 
     renderNavigation: function() {
       var template = Handlebars.templates["printPage-navigation"];
-      console.log(template);
-      console.log(this.$el);
-      $('.navigation-inner').append(this.$el.html(template(this.model.pageModel.attributes._printPage)));
+      this.setElement(template(this.model.model)).$el.appendTo($(".navigation-inner"));
     },
 
     renderBottom: function(lastID) {
       var template = Handlebars.templates["printPage-bottom"];
-      $('.' + lastID).after(this.$el.html(template(this.model.pageModel.attributes._printPage)));
+      this.setElement(template(this.model.model)).$el.insertAfter($('.' + lastID));
       return this;
     }
   });
@@ -46,9 +40,4 @@ define([
     var pageModel = pageView.model;
     new printPageView({model:{ pageModel, model }});
   });
-
-  Adapt.on("menuView:ready", function() {
-
-  });
-
 });
