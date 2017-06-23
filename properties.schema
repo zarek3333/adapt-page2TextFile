@@ -31,8 +31,20 @@
                   "type": "string",
                   "require": true,
                   "title": "Print prompt text",
+                  "help": "Only works with bottom-of-page",
                   "inputType": "Text",
                   "default": "Click this link to view PDF version of this page."
+                },
+                "_showOn": {
+                  "type": "string",
+                  "required": false,
+                  "default": "bottom-of-page",
+                  "title": "Where to display:",
+                  "enum": ["bottom-of-page", "navigation"],
+                  "inputType": {
+                    "type": "Select",
+                    "options": ["bottom-of-page", "navigation"]
+                  }
                 }
               }
             }
