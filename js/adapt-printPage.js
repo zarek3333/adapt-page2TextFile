@@ -5,12 +5,9 @@ define([
   var printPageView = Backbone.View.extend({
 
     initialize: function() {
-      this.listenTo(Adapt, {
-        "navigation:printPage": function(){
-          window.print();},
-      });
 
       this.listenTo(Adapt, 'remove', this.remove);
+      console.log(this.model.model._showOn);
       if(this.model.model._showOn == 'navigation'){
         this.renderNavigation();
       } else {
@@ -18,12 +15,15 @@ define([
         var lastID = blocks.last().get("_id");
         this.renderBottom(lastID);
       }
-
     },
 
     renderNavigation: function() {
       var template = Handlebars.templates["printPage-navigation"];
       this.setElement(template(this.model.model)).$el.appendTo($(".navigation-inner"));
+      this.listenTo(Adapt, {
+        "navigation:printPage": function(){
+          window.print();},
+      });
     },
 
     renderBottom: function(lastID) {
