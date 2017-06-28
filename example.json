@@ -1,5 +1,6 @@
 //contentObjects.json
 "_printPage": {
   "_isEnabled": true,
-  "text": "Click here to print your page"
+  "text": "Click here to print your page",
+  "_showOn": "navigation"
 }
