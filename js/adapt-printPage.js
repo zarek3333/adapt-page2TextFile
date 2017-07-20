@@ -30,6 +30,10 @@ define([
     }
   });
 
+  Adapt.on("pageView:postRender menuView:postRender", function() {
+    $('.printPage-icon').remove();
+  });
+
   Adapt.on("pageView:ready", function(pageView) {
     var model = Adapt.findById(Adapt.location._currentId).get('_printPage');
     if (model == undefined || !model._isEnabled) return;
