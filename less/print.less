@@ -1,5 +1,8 @@
 @media print {
 	/* Article Block Slider */
+	body, p {
+		color: black !important;
+	}
 	.article-block-slider-enabled .has-arrows .block .block-inner {
     		padding: 0px !important;
 	}
@@ -374,11 +377,14 @@
 	/* Flipcard */
 	.flipcard-component .flipcard-item .flipcard-item-face.flipcard-item-back {
 		transform: inherit;
-		color:inherit !important;
+		color:black !important;
 		background:inherit !important;
 		border:0px !important;
 		overflow:visible;
 		position:relative;
+	}
+	.flipcard-item-back-title {
+		color: black !important;
 	}
 	.flipcard-component .flipcard-item .flipcard-item-face.flipcard-item-front {
 		display: none;
