@@ -1,10 +1,9 @@
-define([
-  'core/js/adapt'
-], function(Adapt) {
+define(['core/js/adapt'], function(Adapt) {
 
   var printPageView = Backbone.View.extend({
 
     initialize: function() {
+      this.listenTo(Adapt, "remove", this.remove);
       if (this.model._showOn == 'navigation') {
         this.renderNavigation();
       } else {
@@ -30,15 +29,10 @@ define([
     }
   });
 
-  Adapt.on("pageView:postRender menuView:postRender", function() {
-    $('.printPage-icon').remove();
-  });
-
   Adapt.on("pageView:ready", function(pageView) {
     var model = Adapt.findById(Adapt.location._currentId).get('_printPage');
-    if (model == undefined || !model._isEnabled) return;
-    new printPageView({
-      model: model
-    });
+    if (model == undefined || !model._isEnabled)
+      return;
+    new printPageView({model: model});
   });
 });
