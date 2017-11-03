@@ -30,7 +30,7 @@
                 "_showOn": {
                   "type": "string",
                   "required": false,
-                  "default": "bottom-of-page",
+                  "default": "navigation",
                   "title": "Where to display",
                   "inputType": {
                     "type": "Select",
