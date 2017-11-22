@@ -29,7 +29,7 @@ define(['core/js/adapt'], function(Adapt) {
     }
   });
 
-  Adapt.on("pageView:ready", function(pageView) {
+  Adapt.on("pageView:preRender", function(pageView) {
     var model = Adapt.findById(Adapt.location._currentId).get('_printPage');
     if (model == undefined || !model._isEnabled)
       return;
