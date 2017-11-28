@@ -7,9 +7,9 @@ define(['core/js/adapt'], function(Adapt) {
       if (this.model._showOn == 'navigation') {
         this.renderNavigation();
       } else {
-        var blocks = Adapt.findById(Adapt.location._currentId).findDescendants('blocks');
-        var lastID = blocks.last().get("_id");
-        this.renderBottom(lastID);
+        this.listenTo(Adapt, {
+            "pageView:ready": this.renderBottom
+        });
       }
     },
 
@@ -23,7 +23,9 @@ define(['core/js/adapt'], function(Adapt) {
       });
     },
 
-    renderBottom: function(lastID) {
+    renderBottom: function() {
+      var blocks = Adapt.findById(Adapt.location._currentId).findDescendants('blocks');
+      var lastID = blocks.last().get("_id");
       var template = Handlebars.templates["printPage-bottom"];
       this.setElement(template(this.model)).$el.insertAfter($('.' + lastID));
     }
