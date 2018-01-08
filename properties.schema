@@ -44,6 +44,14 @@
                   "help": "Only works with bottom-of-page",
                   "inputType": "Text",
                   "default": "Click this link to view the PDF version of this page."
+                },
+                "_ariaLabel": {
+                  "type": "string",
+                  "required": false,
+                  "title": "Aria label",
+                  "help": "Only works with navigation view",
+                  "inputType": "Text",
+                  "default": "Print the page."
                 }
               }
             }
