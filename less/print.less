@@ -156,12 +156,20 @@
 	}
 
 	.page-inner {
-		margin-left: 40px;
-		margin-right: 40px;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.article {
 		page-break-after: always;
+		.article-inner {
+			padding: 20px 0 !important;
+		}
+	}
+
+	.component-inner {
+		padding: 0 !important;
+		margin: 0 !important;
 	}
 
 	.article-title {
@@ -244,6 +252,9 @@
 
 	.gmcq-item {
 		width: 100% !important;
+		img {
+			height: 250px !important;
+		}
 	}
 
 	.component-right, .component-left {
@@ -286,7 +297,8 @@
 
 	.hotgraphic-item-graphic {
 		padding-bottom: 20px;
-		width: 20% !important;
+		width: 100% !important;
+		height: 200px !important;
 	}
 
 	.hotgraphic-item-graphic-inner img {
@@ -300,6 +312,10 @@
 
 	.narrative-slider-graphic {
 		display: none;
+	}
+
+	.goTop {
+		display: none !important;
 	}
 
 	.narrative-content {
