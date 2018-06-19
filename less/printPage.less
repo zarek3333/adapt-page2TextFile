@@ -17,8 +17,15 @@
   float: right;
 }
 
+.print-only-text {
+  display: none;
+}
+
 @media print {
   .printPage {
     display: none;
+  }
+  .print-only-text {
+    display: block;
   }
 }

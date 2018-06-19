@@ -20,7 +20,6 @@ define(['core/js/adapt'], function(Adapt) {
       var currentPage = Adapt.contentObjects._byAdaptID[Adapt.location._currentId][0];
       var pageComponents = currentPage.findDescendantModels("components");
       var hotgridComponents = this.searchComponentType(pageComponents, "hotgrid");
-      console.log(hotgridComponents);
       this.appendHotgirdPrint(hotgridComponents);
     },
 
@@ -34,8 +33,6 @@ define(['core/js/adapt'], function(Adapt) {
       if(!hotgridComponents) return;
 
       for(var i in hotgridComponents) {
-        console.log($('.hotgrid-component').eq(i));
-        console.log(hotgridComponents[i]);
         $('.hotgrid-component').eq(i).append("<div class='print-only-text'>" + this.getHotgridItems(hotgridComponents[i].get("_items")) + "</div>");
       }
     },
