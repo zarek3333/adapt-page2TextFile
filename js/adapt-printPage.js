@@ -11,6 +11,41 @@ define(['core/js/adapt'], function(Adapt) {
             "pageView:ready": this.renderBottom
         });
       }
+      this.listenTo(Adapt, {
+          "pageView:ready": this.appendPrintToComponents
+      });
+    },
+
+    appendPrintToComponents: function() {
+      var currentPage = Adapt.contentObjects._byAdaptID[Adapt.location._currentId][0];
+      var pageComponents = currentPage.findDescendantModels("components");
+      var hotgridComponents = this.searchComponentType(pageComponents, "hotgrid");
+      console.log(hotgridComponents);
+      this.appendHotgirdPrint(hotgridComponents);
+    },
+
+    searchComponentType: function(pageComponents, type) {
+      return pageComponents.filter(function(model) {
+        return model.get("_component") === type;
+      });
+    },
+
+    appendHotgirdPrint: function(hotgridComponents) {
+      if(!hotgridComponents) return;
+
+      for(var i in hotgridComponents) {
+        console.log($('.hotgrid-component').eq(i));
+        console.log(hotgridComponents[i]);
+        $('.hotgrid-component').eq(i).append("<div class='print-only-text'>" + this.getHotgridItems(hotgridComponents[i].get("_items")) + "</div>");
+      }
+    },
+
+    getHotgridItems: function(hotgridItems) {
+      var text = '';
+        for(var i in hotgridItems) {
+          text += "<div class='title'>" + hotgridItems[i].title + "</div><div class='text'>" + hotgridItems[i].body + "</div>";
+        }
+        return text;
     },
 
     renderNavigation: function() {
