@@ -1,6 +1,6 @@
 {
   "name": "adapt-printPage",
-  "repository": "git://github.com/KingsOnline/adapt-farfalla",
+  "repository": "git://github.com/KingsOnline/adapt-printPage",
   "framework": ">=2.0.0",
   "version": "1.8.3",
   "displayName": "Print Page",
