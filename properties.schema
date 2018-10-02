@@ -43,7 +43,7 @@
                   "title": "Print prompt text",
                   "help": "Only works with bottom-of-page",
                   "inputType": "Text",
-                  "default": "Click this link to view the PDF version of this page."
+                  "default": "Click here to print or download."
                 },
                 "_ariaLabel": {
                   "type": "string",
