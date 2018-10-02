@@ -2,7 +2,7 @@
   "name": "adapt-printPage",
   "repository": "git://github.com/KingsOnline/adapt-printPage",
   "framework": ">=2.0.0",
-  "version": "1.8.6",
+  "version": "1.8.7",
   "displayName": "Print Page",
   "extension": "Print Page",
   "description": "Adds print page text to bottom of the page",
