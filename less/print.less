@@ -35,6 +35,20 @@
 			display: inherit !important;
 			visibility: inherit !important;
 
+			table {
+				display: table !important;
+
+				tr {
+					display: inline-table !important;
+					width: 100%;
+				}
+
+				td,
+				th {
+					display: table-cell !important;
+				}
+			}
+
 			.brightcove-video-holder {
 				display: none !important;
 			}
@@ -161,6 +175,7 @@
 
 	.article {
 		page-break-after: always;
+
 		.article-inner {
 			padding: 20px 0 !important;
 		}
@@ -251,15 +266,16 @@
 
 	.gmcq-item {
 		width: 100% !important;
+
 		img {
 			height: 250px !important;
 		}
 	}
 
-	.component-right, .component-left {
+	.component-left,
+	.component-right {
 		width: 100% !important;
 	}
-
 	/* Hotgraphic */
 	.hotgraphic-item {
 		display: block !important;
@@ -304,13 +320,10 @@
 	.hotgraphic-item-graphic-inner img {
 		display: block !important;
 	}
-
 	// Hotgrid
-
 	.hotgrid-component .hotgrid-item-image img {
 		width: 100%;
 	}
-
 	/* Narrative */
 	.narrative-hidden {
 		display: block !important;
@@ -386,6 +399,7 @@
 	.chat-line {
 		display: block !important;
 		left: 0 !important;
+
 		.chat-icon-inner {
 			width: 100% !important;
 		}
@@ -433,7 +447,8 @@
 		height: inherit !important;
 	}
 	/* iFrame and H5P */
-	.responsiveIframe-iframe-holder, .kaltura-video-holder {
+	.kaltura-video-holder,
+	.responsiveIframe-iframe-holder {
 		display: none;
 	}
 
@@ -681,9 +696,10 @@
 	.slideshow-slide-controls {
 		display: none;
 	}
-	 .slideshow-slider {
-        	margin-left: inherit !important;
-    	}
+
+	.slideshow-slider {
+		margin-left: inherit !important;
+	}
 	/* Tooltips */
 	a.tooltip span {
 		display: block !important;
