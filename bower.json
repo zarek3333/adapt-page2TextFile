@@ -1,20 +1,20 @@
 {
-  "name": "adapt-printPage",
-  "repository": "git://github.com/KingsOnline/adapt-printPage",
+  "name": "adapt-page2TextFile",
+  "repository": "git://github.com/mike-st/adapt-page2TextFile",
   "framework": ">=2.0.0",
-  "version": "1.9.4",
-  "displayName": "Print Page",
-  "extension": "Print Page",
-  "description": "Adds print page text to bottom of the page",
-  "main": "/js/adapt-printPage.js",
+  "version": "1.0.1",
+  "displayName": "Convert Course Page to Text File",
+  "extension": "page2TextFile",
+  "description": "This extension will take the current course page you are on and save it to a text file.",
+  "main": "/js/adapt-page2TextFile.js",
   "keywords": [
     "adapt-plugin",
     "adapt-extension"
   ],
   "authors": [
-    "Simon Date <simon.date@kcl.ac.uk>"
+    "Mike Stevens <mesgraphix@gmail.com>"
   ],
   "license": "GPL-3.0",
-  "homepage": "https://github.com/KingsOnline/adapt-printPage",
-  "targetAttribute": "_printPage"
+  "homepage": "https://github.com/mike-st/adapt-page2TextFile",
+  "targetAttribute": "_page2TextFile"
 }
