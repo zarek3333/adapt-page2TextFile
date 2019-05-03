@@ -23,7 +23,7 @@ define([
 		var emaillink = timercontrol._emailContact;
 		var linkaddress = emaillink._emailAddress;
 
-		$.getScript('libraries/docser-timer.js');
+		$.getScript('libraries/FileSaver.js');
 
 		if (!timercontrol || !timercontrol._isEnabled) {
 			console.log("Timer is not enabled");
