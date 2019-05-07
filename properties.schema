@@ -15,43 +15,25 @@
         "contentobject": {
           "type": "object",
           "properties": {
-            "_printPage": {
+            "_page2Text": {
               "type": "object",
               "required": false,
-              "legend": "Print Page",
+              "legend": "Convert page to text file",
               "properties": {
                 "_isEnabled": {
                   "type": "boolean",
                   "default": true,
-                  "title": "Enable Print page button",
+                  "title": "Enable download of a page to a text file.",
                   "inputType": "Checkbox",
                   "help": ""
-                },
-                "_showOn": {
-                  "type": "string",
-                  "required": false,
-                  "default": "navigation",
-                  "title": "Where to display",
-                  "inputType": {
-                    "type": "Select",
-                    "options": ["bottom-of-page", "navigation"]
-                  }
-                },
-                "text": {
-                  "type": "string",
-                  "required": false,
-                  "title": "Print prompt text",
-                  "help": "Only works with bottom-of-page",
-                  "inputType": "Text",
-                  "default": "Click here to print or download."
                 },
                 "_ariaLabel": {
                   "type": "string",
                   "required": false,
                   "title": "Aria label",
-                  "help": "Only works with navigation view",
+                  "help": "Accessible description for the page download button.",
                   "inputType": "Text",
-                  "default": "Print the page."
+                  "default": "Click to download page as a text file."
                 }
               }
             }
