@@ -13,9 +13,21 @@
           "type": "object"
         },
         "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
           "type": "object",
           "properties": {
-            "_page2Text": {
+            "_page2TextFile": {
               "type": "object",
               "required": false,
               "legend": "Convert page to text file",
@@ -38,18 +50,6 @@
               }
             }
           }
-        },
-        "article": {
-          "type": "object"
-        },
-        "block": {
-          "type": "object"
-        },
-        "component": {
-          "type": "object"
-        },
-        "course": {
-          "type": "object"
         }
       }
     }
