@@ -35,3 +35,9 @@
     //saveAs(blob, filename + ".txt"); 
     saveAs(blob, "MikesDoc.txt");    
 	};
+
+	$(document).keyup(function(event){
+	    if (event.which == 13) {
+	        $(".page2file-drawer .savetotxt").click();
+	    }
+	});
