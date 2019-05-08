@@ -1,8 +1,7 @@
 define([
 	'backbone',
     'coreJS/adapt',
-    /*'./adapt-notesView',*/
-], function(Backbone, Adapt/*, NotesView*/) {
+], function(Backbone, Adapt) {
 
 	var Page2TextFile = Backbone.View.extend({
 
@@ -21,8 +20,7 @@ define([
 
 	Adapt.once("adapt:initialize", function() {
 		var pagetotext = Adapt.course.get("_page2TextFile");
-		pagetotext = new Backbone.Model(pagetotext);
-		var accesspg2txt = pagetotext._ariaLabel;
+		var accesspg2txt = pagetotext._mypage2txt;
 		var enablepg2txt = pagetotext._isEnabled;
 
 		$.getScript('libraries/FileSaver.js');
@@ -34,21 +32,16 @@ define([
             return;
         }
 
-        var template = Handlebars.templates['page2TextItem'];
-        var $element = $(template(pagetotext.toJSON()));
-
-        Adapt.drawer.triggerCustomView($element, false);
-
         //sets up the drawer with config title and description
         //shown to the student
-        /*var drawerObject = {
-            title: "Convert this page to text file",
-            description: "<script>$('.page2file-drawer').attr('onclick=\"totext()\"');</script>",
+        var drawerObject = {
+            title: "<div class='savetotxt' onclick='totext()'>" + accesspg2txt + "</div>",
+            description: "",
             className: 'page2file-drawer'
-        };*/
+        };
 
         // Syntax for adding a Drawer item
-	    /*Adapt.drawer.addItem(drawerObject, 'pageLevelProgress:show');*/
+	    Adapt.drawer.addItem(drawerObject, 'pageLevelProgress:show');
 		
 	});
 });
