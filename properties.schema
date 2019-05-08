@@ -30,7 +30,7 @@
             "_page2TextFile": {
               "type": "object",
               "required": false,
-              "legend": "Convert page to text file",
+              "legend": "Save a page to a text file",
               "properties": {
                 "_isEnabled": {
                   "type": "boolean",
@@ -39,13 +39,13 @@
                   "inputType": "Checkbox",
                   "help": ""
                 },
-                "_ariaLabel": {
+                "_mypage2txt": {
                   "type": "string",
                   "required": false,
-                  "title": "Aria label",
+                  "title": "Enter a drawer button description",
                   "help": "Accessible description for the page download button.",
                   "inputType": "Text",
-                  "default": "Click to download page as a text file."
+                  "default": "Save this page to a text file"
                 }
               }
             }
