@@ -1,4 +1,4 @@
-	function totext() { 
+function totext() { 
 		$snippets = $('.page');
 
 		$.each($snippets, function (index, obj) {
@@ -34,10 +34,4 @@
     var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
     //saveAs(blob, filename + ".txt"); 
     saveAs(blob, "MikesDoc.txt");    
-	};
-
-	$(document).keyup(function(event){
-	    if (event.which == 13) {
-	        $(".page2file-drawer .savetotxt").click();
-	    }
-	});
+};
