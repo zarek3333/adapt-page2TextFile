@@ -30,8 +30,16 @@ function totext() {
 
 	var text = $('.page').val();
     var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-    var thefilename = $('.modulehead').text();
     var thepagination = $('.navpagenum').text();
+    var thefilename = $('.modulehead').text();
     thefilename = $.trim(thefilename);
-    saveAs(blob, thefilename + "_" + thepagination + ".txt");    
+    var pagetitletag = $('title').text();
+    pagetitletag = $.trim(pagetitletag);
+
+    if( $('.navpagenum').contents().length == 0) {
+    	saveAs(blob, pagetitletag + ".txt");
+    } else {
+    	saveAs(blob, thefilename + "_" + thepagination + ".txt");
+    }
+        
 };
