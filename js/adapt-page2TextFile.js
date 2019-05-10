@@ -36,7 +36,7 @@ define([
         //shown to the student
         var drawerObject = {
             title: "<div class='savetotxt'>" + accesspg2txt + "</div>",
-            description: "<script>$('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { $('.savetotxt').click(); } }); $('.page2file-drawer').click(function(){ totext(); }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "');</script>",
+            description: "<script>$('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { totext(); } }); $('.savetotxt').click(function(){ totext(); }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "');</script>",
             className: 'page2file-drawer'
         };
 
