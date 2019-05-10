@@ -26,7 +26,7 @@ define([
 		$.getScript('libraries/FileSaver.js');
 		$.getScript('libraries/PageConverter.js');
 
-		// do not proceed until glossary enabled on course.json
+		// do not proceed until page to text is enabled on course.json
         if (!pagetotext || !pagetotext._isEnabled) {
         	console.log("Page converter to text file is not enabled");
             return;
@@ -35,8 +35,8 @@ define([
         //sets up the drawer with config title and description
         //shown to the student
         var drawerObject = {
-            title: "<div class='savetotxt' onclick='totext()'>" + accesspg2txt + "</div>",
-            description: "<script>$('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { $('.savetotxt').click(); } }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "');</script>",
+            title: "<div class='savetotxt'>" + accesspg2txt + "</div>",
+            description: "<script>$('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { $('.savetotxt').click(); } }); $('.page2file-drawer').click(function(){ totext(); }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "');</script>",
             className: 'page2file-drawer'
         };
 
