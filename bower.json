@@ -2,7 +2,7 @@
   "name": "adapt-page2TextFile",
   "repository": "git://github.com/mike-st/adapt-page2TextFile",
   "framework": ">=2.0.0",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "Convert Course Page to Text File",
   "extension": "page2TextFile",
   "description": "This extension will take the current course page you are on and save it to a text file.",
