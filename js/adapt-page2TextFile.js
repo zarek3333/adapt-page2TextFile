@@ -36,7 +36,7 @@ define([
         //shown to the student
         var drawerObject = {
             title: "<div class='savetotxt'>" + accesspg2txt + "</div>",
-            description: "<script>if ( $('html').hasClass('accessibility') ) { $('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { totext(); } }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "'); } else { $('.page2file-drawer').click(function(){ totext(); }); }</script>",
+            description: "<div class='hidepgconvertxt'></div><script>if ( $('html').hasClass('accessibility') ) { $('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { totext(); } }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "'); } else { $('.page2file-drawer').click(function(){ totext(); }); }</script>",
             className: 'page2file-drawer'
         };
 
