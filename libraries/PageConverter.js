@@ -1,6 +1,32 @@
 function totext() { 
 		$snippets = $('.page');
 		$menuitems = $('.menu');
+		$perarticle = $('.article');
+		$perblock = $('.block');
+
+	    //COUNT HOW MANY ARTICLES THERE ARE
+		$perarticle.each(function() {
+			var countdarticle = $(this).attr('class');
+	    	var myarticlenum = countdarticle.replace(/testbg/g, "").replace(/quizbg/g, "").replace(/article-block-slider-enabled/g, "").replace(/article/g, "").replace(/nth-child-/g, "").replace(/assessment/g, "").replace(/noSubmitButtons/g, "").replace(/ /g, "");
+	    	var articledetails = myarticlenum.slice(0, 24);
+	    	var howmanyarticle = myarticlenum.substring(24);
+
+	        if ( $(this).hasClass(articledetails) ) {
+	        	$(this).prepend( "<div class='articledetails'>********** [ARTICLE NUMBER: 0" + howmanyarticle + "] **********</div>" );
+	        }
+		});
+
+	    //COUNT HOW MANY BLOCKS THERE ARE
+		$perblock.each(function() {
+			var countdablock = $(this).attr('class');
+	    	var myblocknum = countdablock.replace(/background-switcher-block/g, "").replace(/blockslider-bgimage/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/nth-child-/g, "").replace(/nominheight/g, "").replace(/ /g, "");
+	    	var blockdetails = myblocknum.slice(0, 24);
+	    	var howmanyblocks = myblocknum.substring(24);
+
+	        if ( $(this).hasClass(blockdetails) ) {
+	        	$(this).prepend( "<div class='blockdetails'>********** [ BLOCK NUMBER: 0" + howmanyblocks + " ] **********</div>" );
+	        }
+		});
 
 		if ( $('#wrapper').find('div').hasClass('menu') ) {
 
@@ -33,10 +59,10 @@ function totext() {
 	    	$.each($snippets, function (index, obj) {
 		        var $this = $(this);
 		        var clonedapage = $snippets.clone().prependTo( ".hidepgconvertxt" );
+
 		        clonedapage.find('script').remove(':not(.accordion-item script):not(.notify-imagegrid-grid-item script)');
 		        clonedapage.find('.toproceedon').remove();
 		        clonedapage.find('.aria-label').remove();
-		        clonedapage.find('.quicknav').remove();
 		        clonedapage.find('.azure-widget script').remove();
 		        clonedapage.find('.removeazurevid').remove();
 		        clonedapage.find('.media-widget').remove();
