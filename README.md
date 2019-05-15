@@ -3,7 +3,7 @@
 
 An extension that allows you to save to a text file from the current page you are on. This extension can be used within Adapt Authoring Tool.<br><br>
 
-<a href="https://www.youtube.com/embed/8sUeU69uQrA" target="_blank"><img src="page2text-screen?raw=true" alt="Save to a text file extension" width="768" height="552" border="10" /><br><br>CLICK ABOVE TO WATCH THE YOUTUBE VIDEO</a>
+<a href="https://www.youtube.com/embed/8sUeU69uQrA" target="_blank"><img src="page2text-screen.png?raw=true" alt="Save to a text file extension" width="768" height="552" border="10" /><br><br>CLICK ABOVE TO WATCH THE YOUTUBE VIDEO</a>
 
 ## Function
 
