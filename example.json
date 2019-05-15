@@ -1,13 +1,5 @@
 // To go in the course.json file
 "_page2TextFile": {
     "_isEnabled": true,
-    "_drawerOrder": 4,
-    "title": "Save page to text file",
-    "description": "Click save to file button to convert to following page into a text file.",
-    "_page2TextItems": [
-          {
-              "_fileName": "page2textfile",
-              "_html2textarea": "text file contents."
-          }
-      ]
+    "_mypage2txt": "Save this page to a text file"
 }
