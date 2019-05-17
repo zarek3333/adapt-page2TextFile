@@ -12,7 +12,7 @@ function totext() {
 	    	var howmanyarticle = myarticlenum.substring(24);
 
 	        if ( $(this).hasClass(articledetails) ) {
-	        	$(this).prepend( "<div class='articledetails'>********** [ARTICLE NUMBER: 0" + howmanyarticle + "] **********</div>" );
+	        	$(this).prepend( "<div class='articledetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>********** [ARTICLE NUMBER: 0" + howmanyarticle + "] **********</div>" );
 	        }
 		});
 
@@ -24,7 +24,7 @@ function totext() {
 	    	var howmanyblocks = myblocknum.substring(24);
 
 	        if ( $(this).hasClass(blockdetails) ) {
-	        	$(this).prepend( "<div class='blockdetails'>********** [ BLOCK NUMBER: 0" + howmanyblocks + " ] **********</div>" );
+	        	$(this).prepend( "<div class='blockdetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>********** [ BLOCK NUMBER: 0" + howmanyblocks + " ] **********</div>" );
 	        }
 		});
 
@@ -60,7 +60,7 @@ function totext() {
 		        var $this = $(this);
 		        var clonedapage = $snippets.clone().prependTo( ".hidepgconvertxt" );
 
-		        clonedapage.find('script').remove(':not(.notify-imagegrid-grid-item script)');
+		        clonedapage.find('script').remove();
 		        clonedapage.find('.toproceedon').remove();
 		        clonedapage.find('.aria-label').remove();
 		        clonedapage.find('.azure-widget script').remove();
@@ -94,7 +94,7 @@ function totext() {
 		        clonedapage.find('td').append('\t');
 		        clonedapage.find('th').append('\t');
 
-				var $backofNotify = clonedapage.text().replace(/\' \)\.on\( \'click\'\, function\(\) \{ require\(\'coreJS\/adapt\'\)\.trigger\(\'notify\:alert\'\,\{title\:\'/g, ": ").replace(/\'\,body\:\'/g, "\nNotify Body: ").replace(/\'\,confirmText\: \'Continue\'\}\)\;return false\; \}\)\;/g, "").replace(/\" \)\.on\( \"click\"\, function\(\) \{ require\(\"coreJS\/adapt\"\)\.trigger\(\"notify\:alert\"\,\{title\:\"/g, ": ").replace(/\"\,body\:\"/g, "\nNotify Body: ").replace(/\"return false\; \}\)\;/g, "\n\n").replace(/\"\,confirmText\: \"/g, "\n\n").replace(/\'return false\; \}\)\;/g, "\n\n").replace(/\'\,confirmText\: \'/g, "\n\n").replace(/\$\( \'img\[src\=\"course\/en\/assets\//g, "Notifier Image: ").replace(/\"\]\' \)\.addClass\(\'img2click\'\)\;/g, "").replace(/\"\]\' \)\.on\( \'click\'\, function\(\) \{/g, "").replace(/require\(\'coreJS\/adapt\'\)\.trigger\(\'notify\:popup\'\,\{title\:\'/g, "").replace(/\'\}\)\;return false\;/g, "").replace(/\}\)\;/g, "").replace(/\<p\>/g, " ").replace(/\<\/p\>/g, " ").replace(/\<p tabindex\=\"0\" class\=\"prevent-default accessible-text-block\" role=\"region\"\>/g, " ").replace(/\<p role\=\"region\" tabindex\=\"0\" class\=\"prevent-default accessible-text-block\"\>/g, " ");
+				var $backofNotify = clonedapage.text().replace(/\' \)\.on\( \'click\'\, function\(\) \{ require\(\'coreJS\/adapt\'\)\.trigger\(\'notify\:alert\'\,\{title\:\'/g, ": ").replace(/\'\,body\:\'/g, "\nNotify Body: ").replace(/\'\,confirmText\: \'Continue\'\}\)\;return false\; \}\)\;/g, "").replace(/\" \)\.on\( \"click\"\, function\(\) \{ require\(\"coreJS\/adapt\"\)\.trigger\(\"notify\:alert\"\,\{title\:\"/g, ": ").replace(/\"\,body\:\"/g, "\nNotify Body: ").replace(/\"return false\; \}\)\;/g, "\n\n").replace(/\"\,confirmText\: \"/g, "\n\n").replace(/\'return false\; \}\)\;/g, "\n\n").replace(/\'\,confirmText\: \'/g, "\n\n").replace(/\"\]\' \)\.addClass\(\'img2click\'\)\;/g, "").replace(/\"\]\' \)\.on\( \'click\'\, function\(\) \{/g, "").replace(/require\(\'coreJS\/adapt\'\)\.trigger\(\'notify\:popup\'\,\{title\:\'/g, "").replace(/\'\}\)\;return false\;/g, "").replace(/\}\)\;/g, "").replace(/\<p\>/g, " ").replace(/\<\/p\>/g, " ").replace(/\<p tabindex\=\"0\" class\=\"prevent-default accessible-text-block\" role=\"region\"\>/g, " ").replace(/\<p role\=\"region\" tabindex\=\"0\" class\=\"prevent-default accessible-text-block\"\>/g, " ");
 		   
 		        var txt = $.trim($backofNotify);
 	        	var box = $('.hidepgconvertxt');
