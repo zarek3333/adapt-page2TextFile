@@ -13,7 +13,7 @@ This extension provides the learner the opportunity to save the current Adapt co
 ## Settings  
 
 **URL Parameters** (object):
->**?dev=save** (boolean): Shows the button in the drawer when `?dev=save` is typed in front of # of url path.
+>**?dev=save** (string): Shows the button in the drawer when `?dev=save` is typed in front of # of url path.
 >
 **_page2TextFile** (object):
 >**_isEnabled** (boolean): Turns **Page 2 Text File** on and off. Acceptable values are `true` and `false`.
