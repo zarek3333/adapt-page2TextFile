@@ -47,6 +47,8 @@ define([
 		var dev = getUrlParameter('dev');
 		if(dev == 'save'){
 
+			$('html').addClass('pagesave2txt');
+	        
 	        //sets up the drawer with config title and description
 	        //shown to the student
 	        var drawerObject = {
@@ -58,6 +60,8 @@ define([
 	        // Syntax for adding a Drawer item
 		    Adapt.drawer.addItem(drawerObject, 'pageLevelProgress:show');
 
+		} else {
+			//Don't show save button
 		}
 		
 	});
