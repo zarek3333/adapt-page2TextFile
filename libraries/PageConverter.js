@@ -121,6 +121,8 @@ function totext() {
 	    		saveAs(blob, thefilename + "_" + thepagination + ".txt");
 	    	}
 	    }
+	    
+	    require("coreJS/adapt").trigger("notify:popup",{title:"Caution you are viewing this course in developer mode!",body:"To preview the course as a regular viewer with complete functionality restored, please remove '<b>?dev=save</b>' in URL path above."});return false;
 
     }   
 };
