@@ -74,6 +74,7 @@ function totext() {
 	        clonedapage.find('.reveal-widget-item .reveal-popup-open').remove();
 	        clonedapage.find('.slider-scale-numbers .slider-scale-marker').remove();
 	        clonedapage.find('.slider-widget .slider-background').remove();
+	        clonedapage.find('.dragquesbutton button').remove();
 	        clonedapage.find('.narrative-strapline-title .narrative-strapline-title-inner').before( "Mobile Narrative Strapline:" );
 
 	        //Image Grid Notifier find items using notifier
