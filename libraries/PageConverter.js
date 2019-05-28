@@ -3,6 +3,7 @@ function totext() {
 	$menuitems = $('.menu');
 	$perarticle = $('.article');
 	$perblock = $('.block');
+	$percomponent = $('.component');
 
     //COUNT HOW MANY ARTICLES THERE ARE
 	$perarticle.each(function() {
@@ -26,6 +27,11 @@ function totext() {
         if ( $(this).hasClass(blockdetails) ) {
         	$(this).prepend( "<div class='blockdetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>********** [ BLOCK NUMBER: 0" + howmanyblocks + " ] **********</div>" );
         }
+	});
+
+	//PLACE A LABEL FOR A COMPONENT
+	$percomponent.each(function() {
+        	$(this).prepend( "<div class='componentdetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>********** [ COMPONENT DETAILS BELOW ] **********</div>" );
 	});
 
 	if ( $('#wrapper').find('div').hasClass('menu') ) {
