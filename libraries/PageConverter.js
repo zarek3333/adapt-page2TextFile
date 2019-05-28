@@ -7,7 +7,7 @@ function totext() {
 
     //COUNT HOW MANY ARTICLES THERE ARE
 	$perarticle.each(function() {
-		var countdarticle = $(this).attr('class');
+	var countdarticle = $(this).attr('class');
     	var myarticlenum = countdarticle.replace(/testbg/g, "").replace(/quizbg/g, "").replace(/article-block-slider-enabled/g, "").replace(/article/g, "").replace(/nth-child-/g, "").replace(/assessment/g, "").replace(/noSubmitButtons/g, "").replace(/ /g, "");
     	var articledetails = myarticlenum.slice(0, 24);
     	var howmanyarticle = myarticlenum.substring(24);
@@ -19,8 +19,8 @@ function totext() {
 
     //COUNT HOW MANY BLOCKS THERE ARE
 	$perblock.each(function() {
-		var countdablock = $(this).attr('class');
-    	var myblocknum = countdablock.replace(/background-switcher-block/g, "").replace(/blockslider-bgimage/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/nth-child-/g, "").replace(/nominheight/g, "").replace(/ /g, "");
+	var countdablock = $(this).attr('class');
+    	var myblocknum = countdablock.replace(/background-switcher-block/g, "").replace(/blockslider-bgimage/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/nth-child-/g, "").replace(/nominheight/g, "").replace(/removeminheight/g, "").replace(/ /g, "");
     	var blockdetails = myblocknum.slice(0, 24);
     	var howmanyblocks = myblocknum.substring(24);
 
