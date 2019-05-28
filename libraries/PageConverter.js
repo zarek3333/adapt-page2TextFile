@@ -81,7 +81,7 @@ function totext() {
 	        clonedapage.find('.slider-scale-numbers .slider-scale-marker').remove();
 	        clonedapage.find('.slider-widget .slider-background').remove();
 	        clonedapage.find('.dragquesbutton button').remove();
-	        clonedapage.find('.narrative-strapline-title .narrative-strapline-title-inner').before( "Mobile Narrative Strapline:" );
+	        clonedapage.find('.narrative-strapline-title .narrative-strapline-title-inner').remove();
 
 	        //Image Grid Notifier find items using notifier
 	        $('.notify-imagegrid-grid-item').each(function() {
