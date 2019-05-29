@@ -20,7 +20,7 @@ function totext() {
     //COUNT HOW MANY BLOCKS THERE ARE
 	$perblock.each(function() {
 	var countdablock = $(this).attr('class');
-    	var myblocknum = countdablock.replace(/background-switcher-block/g, "").replace(/blockslider-bgimage/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/nth-child-/g, "").replace(/nominheight/g, "").replace(/removeminheight/g, "").replace(/ /g, "");
+    	var myblocknum = countdablock.replace(/background-switcher-block/g, "").replace(/blockslider-bgimage/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/nth-child-/g, "").replace(/nominheight/g, "").replace(/removeminheight/g, "").replace(/noborderline/g, "").replace(/removetoppad/g, "").replace(/removebotpad/g, "").replace(/middlemerge/g, "").replace(/narrativeaudio/g, "").replace(/blocknext/g, "").replace(/visibility-hidden/g, "").replace(/greyblock/g, "").replace(/hidewhitebg/g, "").replace(/ /g, "");
     	var blockdetails = myblocknum.slice(0, 24);
     	var howmanyblocks = myblocknum.substring(24);
 
