@@ -129,7 +129,7 @@ function totext() {
 	    	}
 	    }
 	    
-	    require("coreJS/adapt").trigger("notify:popup",{title:"Caution you are viewing this course in developer mode!",body:"To preview the course as a regular viewer with complete functionality restored, please remove '<b>?dev=save</b>' in URL path above."});return false;
+	    require("coreJS/adapt").trigger("notify:popup",{title:"Caution you are viewing this course in developer mode!",body:"To preview the course as a regular viewer with complete functionality restored, please remove '<b>?export=on</b>' in URL path above."});return false;
 
     }   
 };
