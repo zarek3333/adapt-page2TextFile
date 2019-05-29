@@ -94,9 +94,9 @@ function totext() {
 	        clonedapage.find('p').append('\n\n');
 	        clonedapage.find('ul').append('\n\n');
 	        clonedapage.find('ol').append('\n\n');
-	        clonedapage.find('ul ul li:first-child').prepend('\n\n\t');
-	        clonedapage.find('ol ol li:first-child').prepend('\n\n\t');
-	        clonedapage.find('li').append('\t');
+	        clonedapage.find('ul > :first-child').prepend('\n\n\t• ');
+	        clonedapage.find('ol > :first-child').prepend('\n\n\t• ');
+	        clonedapage.find('li').not(':first-child').prepend('\t• ');
 	        clonedapage.find('tr').append('\n\n');
 	        clonedapage.find('td').append('\t');
 	        clonedapage.find('th').append('\t');
