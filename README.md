@@ -1,7 +1,7 @@
 # adapt-page2TextFile
 ================
 
-An extension that allows you to save to a text file from the current page you are on. This extension can be used within Adapt Authoring Tool. Please note the button will not show in the drawer until "<strong>?dev=save</strong>" is typed in front of the # in the URL path. This is so that users will not be able to see question feedback potentially giving them the answers in the course when the page is saved to a text file.<br><br>
+An extension that allows you to save to a text file from the current page you are on. This extension can be used within Adapt Authoring Tool. Please note the button will not show in the drawer until "<strong>?export=on</strong>" is typed in front of the # in the URL path. This is so that users will not be able to see question feedback potentially giving them the answers in the course when the page is saved to a text file.<br><br>
 
 <a href="https://www.youtube.com/embed/QnE6aPBvc7M" target="_blank"><img src="page2text-screen.png?raw=true" alt="Save to a text file extension" width="768" height="552" border="10" /><br><br>CLICK ABOVE TO WATCH THE YOUTUBE VIDEO</a>
 
@@ -13,7 +13,7 @@ This extension provides the learner the opportunity to save the current Adapt co
 ## Settings  
 
 **URL Parameters** (object):
->**?dev=save** (string): Shows the button in the drawer when `?dev=save` is typed in front of # of url path.
+>**?export=on** (string): Shows the button in the drawer when `?export=on` is typed in front of # of url path.
 >
 **_page2TextFile** (object):
 >**_isEnabled** (boolean): Turns **Page 2 Text File** on and off. Acceptable values are `true` and `false`.
