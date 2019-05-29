@@ -37,7 +37,7 @@
                   "default": true,
                   "title": "Enable download of a page to a text file.",
                   "inputType": "Checkbox",
-                  "help": "Please note the button will not show in the drawer until '?dev=save' is typed in front of the # in the URL path. This is so that users will not be able to see question feedback potentially giving them the answers in the course when the page is saved to a text file."
+                  "help": "Please note the button will not show in the drawer until '?export=on' is typed in front of the # in the URL path. This is so that users will not be able to see question feedback potentially giving them the answers in the course when the page is saved to a text file."
                 },
                 "_mypage2txt": {
                   "type": "string",
