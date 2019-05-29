@@ -44,8 +44,8 @@ define([
 		        }
 		    };
 		};
-		var dev = getUrlParameter('dev');
-		if(dev == 'save'){
+		var dev = getUrlParameter('export');
+		if(dev == 'on'){
 
 			$('html').addClass('pagesave2txt');
 	        
