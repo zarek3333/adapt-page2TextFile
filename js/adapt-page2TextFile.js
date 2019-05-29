@@ -52,13 +52,22 @@ define([
 	        //sets up the drawer with config title and description
 	        //shown to the student
 	        var drawerObject = {
-	            title: "<div class='savetotxt'>" + accesspg2txt + "</div>",
-	            description: "<div class='hidepgconvertxt'></div><script>if ( $('html').hasClass('accessibility') ) { $('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { totext(); $('.articledetails').remove(); $('.blockdetails').remove(); $(this).remove(); } }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "'); } else { $('.page2file-drawer').click(function(){ totext(); $('.articledetails').remove(); $('.blockdetails').remove(); $(this).remove(); }); }</script>",
+	            title: "",
+	            description: "",
 	            className: 'page2file-drawer'
 	        };
 
 	        // Syntax for adding a Drawer item
 		    Adapt.drawer.addItem(drawerObject, 'pageLevelProgress:show');
+
+		    $(function () {
+			  $(".navigation-drawer-toggle-button").bind("click", function () {
+			    window.setTimeout(function(){ 
+			    	$( "<div class='savetotxt'>" + accesspg2txt + "</div>" ).appendTo( ".page2file-drawer .drawer-item-title-inner" );
+			    	$( "<div class='hidepgconvertxt'></div><script>if ( $('html').hasClass('accessibility') ) { $('.page2file-drawer').keyup(function(event) { if (event.keyCode === 13) { totext(); $('.articledetails').remove(); $('.blockdetails').remove(); $(this).remove(); } }); $('.page2file-drawer .drawer-item-title-inner').attr('tabindex','-1'); $('.page2file-drawer').attr('aria-label','" + accesspg2txt + "'); } else { $('.page2file-drawer').click(function(){ totext(); $('.articledetails').remove(); $('.blockdetails').remove(); $(this).remove(); }); }</script>" ).appendTo( ".page2file-drawer .drawer-item-description-inner" );
+			    }, 111);
+			  });
+			});
 
 		} else {
 			//Don't show save button
