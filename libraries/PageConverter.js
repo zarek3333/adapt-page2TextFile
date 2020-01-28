@@ -4,6 +4,7 @@ function totext() {
 	$perarticle = $('.article');
 	$perblock = $('.block');
 	$percomponent = $('.component');
+	$perimage = $('img');
 
     //COUNT HOW MANY ARTICLES THERE ARE
 	$perarticle.each(function() {
@@ -32,6 +33,16 @@ function totext() {
 	//PLACE A LABEL FOR A COMPONENT
 	$percomponent.each(function() {
         	$(this).prepend( "<div class='componentdetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>********** [ COMPONENT DETAILS BELOW ] **********</div>" );
+	});
+
+	//PULL ALT TAGS FOR IMAGE TAGS
+	$perimage.each(function() {
+        	var imgaltinfo = $(this).attr('alt');
+        	if (typeof imgaltinfo === "undefined") {
+			    $(this).prepend( "<div class='imagedetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>[ IMAGE ALT TAG ] = *IMAGE IS MISSING AN ALT TAG" );
+			} else {
+				$(this).prepend( "<div class='imagedetails a11y-ignore' aria-hidden='true' tabindex='-1' style='display:none'>[ IMAGE ALT TAG ] = " + imgaltinfo );
+			}
 	});
 
 	if ( $('#wrapper').find('div').hasClass('menu') ) {
@@ -82,6 +93,7 @@ function totext() {
 	        clonedapage.find('.slider-widget .slider-background').remove();
 	        clonedapage.find('.dragquesbutton button').remove();
 	        clonedapage.find('.narrative-strapline-title .narrative-strapline-title-inner').remove();
+	        clonedapage.find('.trickle-button-inner style').remove();
 
 	        //Image Grid Notifier find items using notifier
 	        $('.notify-imagegrid-grid-item').each(function() {
