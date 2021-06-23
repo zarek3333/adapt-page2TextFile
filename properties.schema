@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {},
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_page2TextFile": {
+              "type": "object",
+              "required": false,
+              "legend": "Save a page to a text file",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": true,
+                  "title": "Enable download of a page to a text file.",
+                  "inputType": "Checkbox",
+                  "help": "Please note the button will not show in the drawer until '?export=on' is typed in front of the # in the URL path. This is so that users will not be able to see question feedback potentially giving them the answers in the course when the page is saved to a text file."
+                },
+                "_mypage2txt": {
+                  "type": "string",
+                  "required": false,
+                  "title": "Enter a drawer button description",
+                  "help": "Accessible description for the page download button.",
+                  "inputType": "Text",
+                  "default": "Save this page to a text file"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
