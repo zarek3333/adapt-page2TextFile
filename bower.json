@@ -2,7 +2,7 @@
   "name": "adapt-page2TextFile",
   "repository": "git://github.com/mike-st/adapt-page2TextFile",
   "framework": ">=5",
-  "version": "5.1.7",
+  "version": "5.1.8",
   "displayName": "Convert Course Page to Text File",
   "extension": "page2TextFile",
   "description": "This extension will take the current course page you are on and save it to a text file. Please note the button will not show in the drawer until '?export=on' is typed in front of the # in the URL path. This is so that users will not be able to see question feedback potentially giving them the answers in the course when the page is saved to a text file.",
