@@ -22,7 +22,7 @@ function totext() {
     //COUNT HOW MANY BLOCKS THERE ARE
 	$perblock.each(function() {
 		var countdablock = $(this).attr('class');
-    	var myblocknum = countdablock.replace(/background-switcher-block/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/half2topmerge/g, "").replace(/nominheight/g, "").replace(/removeminheight/g, "").replace(/noborderline/g, "").replace(/removetoppad/g, "").replace(/removebotpad/g, "").replace(/middlemerge/g, "").replace(/narrativeaudio/g, "").replace(/blocknext/g, "").replace(/u-visibility-hidden/g, "").replace(/greyblock/g, "").replace(/hidewhitebg/g, "").replace(/is-complete/g, "").replace(/is-disabled/g, "").replace(/u-display-none/g, "").replace(/has-bg-image/g, "").replace(/ /g, "");
+    	var myblocknum = countdablock.replace(/has-background-switcher-image/g, "").replace(/block/g, "").replace(/paddingoff/g, "").replace(/mytopborder/g, "").replace(/mybottomborder/g, "").replace(/quicknav/g, "").replace(/half2topmerge/g, "").replace(/nominheight/g, "").replace(/removeminheight/g, "").replace(/noborderline/g, "").replace(/removetoppad/g, "").replace(/removebotpad/g, "").replace(/middlemerge/g, "").replace(/narrativeaudio/g, "").replace(/blocknext/g, "").replace(/u-visibility-hidden/g, "").replace(/greyblock/g, "").replace(/hidewhitebg/g, "").replace(/is-complete/g, "").replace(/is-disabled/g, "").replace(/u-display-none/g, "").replace(/has-bg-image/g, "").replace(/ /g, "");
     	var blockdetails = myblocknum.slice(0, 24);
     	//var howmanyblocks = myblocknum.substring(24);
     	var howmanyblocks = $(this).index() + 1;
